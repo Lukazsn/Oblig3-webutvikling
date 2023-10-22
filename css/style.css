@@ -1,44 +1,64 @@
-/* Setter standard skrifttype for hele nettsiden */
+/* General Styles */
 body {
     font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    text-decoration: none;
 }
 
-/* Definerer et grid-container som inneholder header, main og footer */
-#grid-container {
+/* Grid Container Styles */
+#grid {
     display: grid;
     grid-template-areas: "header" "main" "footer";
+    margin: 0;
 }
 
-/* Legger til litt padding til header, main og footer for mellomrom */
-header, main, footer {
-    padding: 1rem;
-}
-
-/* Styler header-seksjonen */
+/* Header Styles */
 header {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
     grid-area: header;
+    padding: 0;
+    margin: 0;
+    background-color: #7DC6FB;
+    color: #fff;
+    text-align: center;
 }
 
-/* Gjør navigasjonselementene i header til flexbokser som er justert mellomrom og til høyre */
+/* Navigation Styles */
 header nav {
     display: flex;
     justify-content: space-between;
     position: relative;
+    background-color: transparent;
 }
 
-/* Gjør logo-lenken uten understrek */
+header section {
+    color: #000000;
+}
+
+header li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+
+header h6 {
+    max-width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 #logo {
     text-decoration: none;
 }
 
-/* Skjuler standard navigasjonsmeny */
 .navbar {
     display: none;
 }
 
-/* Styler responsiv navigasjonsmeny */
+/* Responsive Navigation Styles */
 .responsive {
     display: flex;
     flex-direction: column;
@@ -58,33 +78,45 @@ header nav {
     text-decoration: none;
 }
 
-/* Styler en svart knapp */
-.black-btn {
-    display: inline-block;
-    padding: 1rem;
-    text-decoration: none;
-    background-color: #171717;
-    color: #fff;
-    border-radius: 5px;
-    font-weight: 400;
+/* Sub-Navigation Styles */
+#sub-navbar {
+    background-color: #0a4f8a;
+    padding: 0.5rem 0;
 }
 
-/* Styler main-seksjonen i gridet */
+#sub-navbar .sub-navbar {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#sub-navbar .sub-navbar li {
+    padding: 0 1rem;
+}
+
+#sub-navbar .sub-navbar li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main Section Styles */
 main {
     grid-area: main;
+    text-align: center;
 }
 
-/* Setter bredden til bilder inni main-seksjonen til 100% */
 main section img {
     width: 100%;
 }
 
-/* Styler footer-seksjonen i gridet */
+/* Footer Styles */
 footer {
     grid-area: footer;
 }
 
-/* Styler tjeneste-seksjonen med flexbokser og bakgrunnsfarge */
+/* Services Section Styles */
 #services {
     display: flex;
     flex-direction: row;
@@ -105,14 +137,12 @@ footer {
     min-width: 200px;
 }
 
-/* Mediestørrelsesregel for skjermer som er bredere enn 600px */
+/* Media Query Styles */
 @media only screen and (min-width: 600px) {
-    /* Endrer grid-malen for bredere skjermer */
-    #grid-container {
+    #grid {
         grid-template-areas: "header header header" "main main main" "footer footer footer";
     }
 
-    /* Viser den skjulte navigasjonsmenyen og skjuler menyikoner */
     .navbar {
         display: flex;
         flex-direction: row;
@@ -121,32 +151,45 @@ footer {
         margin: 0;
     }
 
-    /* Skjuler menyikoner i header */
     #ham, .fa-magnifying-glass {
         display: none;
     }
 
-    /* Gjør flex-seksjoner som viser bilder og tekst ved siden av hverandre med mellomrom */
-    .flex-section {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
 
-    /* Reduserer bildenes bredde til 50% i flex-seksjoner */
-    .flex-section img {
-        width: 50%;
-    }
+}
 
-    /* Legger til litt mellomrom og justering i flex-seksjoner */
-    .flex-section section {
-        padding: 1rem;
-        width: 40%;
-        align-self: center;
-    }
+/* Styles for Sub-Navigation within the Header */
+#sub-navbar {
+    background-color: #47A8EF;
+}
 
-    /* Endrer rekkefølgen av bilde og tekst i høyrejusterte seksjoner */
-    .right img {
-        order: 1;
-    }
+#grid header *#sub-navbar .sub-navbar li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.sub-navbar {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.sub-navbar li {
+    padding: 0 1rem;
+}
+
+.sub-navbar li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a.custom {
+    text-decoration: none;
+    color: #000000;
+}
+
+.Farge-endring {
+    color: #a5a5a5;
 }

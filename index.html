@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">          <!-- tok bare standard starten for å implementere css og elementer-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Inkluderer en stilark for normalisering for å sikre at nettstedet ser likt ut på alle nettlesere -->
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
-    <!-- Inkluderer ikon-stiler for ikoner fra FontAwesome -->
     <link href="css/font/css/fontawesome.css" rel="stylesheet">
     <link href="css/font/css/brands.css" rel="stylesheet">
     <link href="css/font/css/solid.css" rel="stylesheet">
-    <!-- Inkluderer nettstedets egen stilark -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <title>Vinterhjerte</title>
 </head>
 <body>
     <!-- Hovedbeholderen for nettstedet -->
-    <div id="grid-container">
+    <div id="grid">
         <header>
-            <nav>
-                <a href="#" id="logo">Logo</a>
-                <div>
+            <nav class="main-nav">
+                <img src="img/Skjermbilde 2023-10-20 021407.jpg" alt="Vinterhjerte Logo">
+                <div class="nav-content">
                     <!-- Ikon for søkefunksjonen -->
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <!-- Ikon for navigasjonsmenyen på små skjermer -->
@@ -27,49 +24,62 @@
                 </div>
                 <ul class="navbar">
                     <!-- Navigasjonsmeny med lenker -->
-                    <li><a href="#">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#">Hjem</a></li>
+                    <li><a href="produkter">Produkter</a></li>
+                    <li><a href="#services">Tjenester</a></li>
                 </ul>
             </nav>
-            
+            <nav id="sub-navbar">
+                <ul class="sub-navbar">
+                    <!-- Undermeny med lenker -->     
+                    <li><a href="#">Nytt</a></li>
+                    <li><a href="#">Dame</a></li>
+                    <li><a href="#">Herre</a></li>
+                    <li><a href="#">Barn</a></li>
+                    <li><a href="#">Salg</a></li>
+                </ul>
+            </nav>
             <section>
-                <h1>Vinterhjerte</h1>
-                <!-- Knapp for å lese mer (for eksempel om bolleoppskrifter) -->
-                <a href="#" class="black-btn">Read more</a>
+                <h6>Trå inn i vinteren med stil og varme i vår koselige samling av Sorel-støvler. Utforsk guiden nå!</h6>
             </section>
         </header>
         <main>
             <!-- Seksjon 1 med en overskrift og en beskrivelse -->
-            <section class="flex-section">
+            <section class="flex">
                 <img src="https://placehold.co/600x400" alt="Grå placeholder bilde">
                 <section>
-                    <h2>Lorem ipsum</h2>
+                    <h2>Vinter klassikere som vinner hver gang</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu</p>
                 </section>    
             </section>
             <!-- Seksjon 2 med en overskrift og en beskrivelse (denne er høyrejustert) -->
-            <section class="flex-section right">
+            <section class="flex høyre">
                 <img src="https://placehold.co/600x400" alt="Grå placeholder bilde">
                 <section>
-                    <h2>Lorem ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu</p>
+                    <h2>Polarvakt Frostbittstøvler</h2>
+                    <p class="Farge-endring">Før: 2500 kr</p>
+                    <p>Nå: 1999 kr</p>
                 </section>
             </section>
             <!-- Seksjon 3 for tjenester med flere artikler -->
             <section id="services">
                 <h2>Services</h2>
                 <article>
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                    <h3>Hjelp ? </h3>
+                    <p>Bestilling</p>
+                    <p>Betaling og sikkerhet</p>
+                    <p>Frakt og leveranse</p>
                 </article>
                 <article>
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                    <h3>Kontakt oss</h3>
+                    <p>Registrer deg som kunde</p>
+                    <p>Ring kundestøtte</p>
+                    <p>Chat</p>
                 </article>
                 <article>
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                    <h3>Om Vinterhjerte</h3>
+                    <p>Ledige stillinger</p>
+                    <a href="om-oss-alt.html" class="custom">Om oss</a>
                 </article>
             </section>
         </main>
