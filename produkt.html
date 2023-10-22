@@ -3,18 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+    <link href="css/font/css/fontawesome.css" rel="stylesheet">
+    <link href="css/font/css/brands.css" rel="stylesheet">
+    <link href="css/font/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <title>Vinterhjerte</title>
 </head>
 <body>
-    <nav id="meny-bar">
-        <ul>
-            <li><a href="index.html">Hjem</a></li>
-            <li><a href="om-oss-alt.html">Om oss</a></li>
-            <!--<li><a href="produkt.html">Produkt</a></li>-->
-        </ul>
-    </nav>
-    
-    
+    <div id="grid">
+        <header>
+            <nav class="main-nav">
+                <a href="index.html"> <!--Gjorde logoen til en link til index.html-->
+                    <img src="img/Skjermbilde_2023-10-20_021407.jpg" alt="Vinterhjerte Logo">
+                </a>
+                <div class="nav-content">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i id="ham" class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="navbar">
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="produkter">Produkter</a></li>
+                    <li><a href="#Tjenester">Tjenester</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+            </div>
+            <nav id="sub-navbar">
+                <ul class="sub-navbar">
+                    <li><a href="#">Nytt</a></li>
+                    <li><a href="#">Dame</a></li>
+                    <li><a href="#">Herre</a></li>
+                    <li><a href="#">Barn</a></li>
+                    <li><a href="#">Salg</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <main>
+        <div class="produkt-container">
+            <img src="img/shoes-795698_1280.jpg" alt="Polarvakt Frostbittstøvler">
+            <aside class="produkt-info">
+                <h2 class="Polarvakt-endring">Polarvakt Frostbittstøvler</h2>
+                <p class="Farge-endring">Før: 2500 kr</p>
+                <p>Nå: 1999 kr</p>
+                <button class="Legg-til-i-handlekurv">Legg til i handlekurv</button>
+            </aside>
+        </div>
+    </main>
+    <script>
+        //Tok scriptet fra forelesning "flex og grid" fra uka før for å ha en funksjonererende hambruger meny men den er i konflikt med den ene baren på toppen av siden på mobil
+        let x = document.querySelector(".navbar")
+        document.getElementById("ham").addEventListener("click", (e) => {
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar"
+            }
+        })
+    </script>
 </body>
 </html>

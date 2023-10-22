@@ -73,10 +73,13 @@ header h6 {
 
 .responsive a {
     color: #fff;
-    display: inline-block;
-    padding: 1rem;
+    display: block;
+    padding: 1rem 0;
+    text-align: center;
     text-decoration: none;
 }
+
+
 
 /* Sub-Navigation Styles */
 #sub-navbar {
@@ -117,7 +120,7 @@ footer {
 }
 
 /* Services Section Styles */
-#services {
+#Tjenester {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -126,12 +129,12 @@ footer {
     justify-content: space-around;
 }
 
-#services h2 {
+#Tjenester h2 {
     width: 100%;
     text-align: center;
 }
 
-#services article {
+#Tjenester article {
     max-width: 300px;
     width: 100%;
     min-width: 200px;
@@ -155,8 +158,104 @@ footer {
         display: none;
     }
 
-
 }
+
+    /* Mobile Styles */
+@media (max-width: 600px) {
+    header {
+        font-size: 1.5rem; /* Decrease header font size */
+    }
+
+    header nav {
+        flex-direction: row; /* Adjust navigation flex direction for mobile */
+    }
+
+    header section h6{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    main section h2{
+        max-width: 100%;
+        text-align: center;
+        padding: 10px 0px;
+   
+    }
+
+    main section img {
+        max-width: 100%; /* Ensure images don't overflow on small screens */
+    }
+
+    .search-bar {
+        padding: 5px; /* Adjust search bar padding for mobile */
+    }
+
+    .search-bar input[type="text"] {
+        padding: 5px; /* Adjust input padding for mobile */
+    }
+
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100% !important;
+ 
+    }
+
+    .nav-content .fa-solid {
+        font-size: 2rem;
+    }
+
+    .nav-content i {
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+    
+
+    .flex {
+        flex-direction: column; /* Adjust flex direction for mobile */
+    }
+
+    .main {
+        padding: 10px;
+    }
+
+    .produkt-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .produkt-container img {
+        max-width: 100%;
+        margin-right: 0px;
+    }
+
+    .produkt-info {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .Legg-til-i-handlekurv {
+        padding: 10px 20px;
+    }
+
+    #Tjenester {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        background-color: #7DC6FB;
+        padding: 1rem;
+    }
+
+
+    
+    #Tjenester atricle {
+        max-width: 100%;
+    }
+    /* Add more mobile-specific styles as needed */
+}
+
+
 
 /* Styles for Sub-Navigation within the Header */
 #sub-navbar {
@@ -193,3 +292,75 @@ a.custom {
 .Farge-endring {
     color: #a5a5a5;
 }
+.search-bar {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.search-bar input[type="text"] {
+    border: 2px solid #000;
+    padding: 0px;
+    border-radius: 20px;
+    outline: none;
+}
+
+main .produkt-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+main .produkt-container img {
+    max-width: 100%;
+    margin-right: 0px;
+}
+
+main .produkt-info {
+    margin: 20px;
+    text-align: left;
+}
+
+main .produkt-info h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+main .produkt-info p {
+    margin: 20px 0;
+}
+
+main .produkt-info .Legg-til-i-handlekurv {
+    display: inline-block;
+    padding: 40px 60px; /* Adjust the padding as needed */
+    background-color: #7DC6FB; /* Change to the desired button background color */
+    color: #fff; /* Button text color */
+    font-weight: bold;
+    text-decoration: none; /* Remove underlines */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth color transition on hover */
+}
+
+main .produkt-info .Legg-til-i-handlekurv:hover {
+    background-color: #7DC6FB; /* Change to the desired hover background color */
+}
+
+.produkt-container .Polarvakt-endring {
+    color:#69EDFF;
+}
+
+#om-oss {
+    max-width: 800px; /* Begrens maksimal bredde for bedre lesbarhet */
+    margin: 0 auto; /* Sentrer innholdet horisontalt */
+  }
+
+  #om-oss p {
+    margin: 20px 0; /* Legg til litt mellomrom mellom avsnittene for bedre lesbarhet */
+    font-weight: bold;
+  }

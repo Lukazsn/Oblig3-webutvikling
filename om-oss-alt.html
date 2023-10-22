@@ -3,24 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+    <link href="css/font/css/fontawesome.css" rel="stylesheet">
+    <link href="css/font/css/brands.css" rel="stylesheet">
+    <link href="css/font/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <title>Vinterhjerte</title>
 </head>
 <body>
     <div id="grid">
         <header>
-            <nav id="meny-bar">
-                <ul>
+            <nav class="main-nav">
+                <a href="index.html"> <!--Gjorde logoen til en link til index.html-->
+                    <img src="img/Skjermbilde_2023-10-20_021407.jpg" alt="Vinterhjerte Logo">
+                </a>
+                <div class="nav-content">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i id="ham" class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="navbar">
                     <li><a href="index.html">Hjem</a></li>
-                    <li><a href="om-oss-alt.html">Om oss</a></li>
-                    <!--<li><a href="produkt.html">Produkt</a></li>-->
+                    <li><a href="produkter">Produkter</a></li>
+                    <li><a href="#Tjenester">Tjenester</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+            </div>
+            <nav id="sub-navbar">
+                <ul class="sub-navbar">
+                    <li><a href="#">Nytt</a></li>
+                    <li><a href="#">Dame</a></li>
+                    <li><a href="#">Herre</a></li>
+                    <li><a href="#">Barn</a></li>
+                    <li><a href="#">Salg</a></li>
                 </ul>
             </nav>
         </header>
-
-        </ul>
-    </nav>
-    
-    
+    </div>
+    <main>
+        <section id="om-oss">
+        <h1>Om oss</h1>
+        <p>Vinterhjerte er din ultimate destinasjon for kvalitetsvinterstøvler og tilbehør. Vi er stolte av å tilby et bredt utvalg av stilig, komfortabelt og funksjonelt fottøy som holder føttene varme og tørre i de tøffeste vinterforholdene.</p>
+        <p>Med en lidenskap for kvalitet og design har vi kuratert en eksklusiv samling av vinterstøvler fra anerkjente merker over hele verden. Vårt mål er å sørge for at du er rustet for kulde, snø og is med stil.</p>
+        <p>Uansett om du leter etter varme støvler for daglig bruk eller spesialiserte støvler for utendørsaktiviteter, har Vinterhjerte noe for enhver smak og behov. Vår ekspertise og engasjement for kundetilfredshet gjør oss til den foretrukne destinasjonen for alle vinterstøvelbehov.</p>
+        <p>Vi er dedikert til å tilby en enestående handleopplevelse, med rask levering og enestående kundeservice. Velkommen til Vinterhjerte - ditt valg for kvalitetsvinterstøvler.</p>
+        <p>Med en historie som går tilbake over to tiår, har Vinterhjerte vært dedikert til å levere førsteklasses vinterstøvler og tilbehør til våre kunder. Vår reise begynte som en lidenskap for kvalitetsfottøy og en visjon om å hjelpe folk med å takle de kaldeste årstidene.</p>
+        <p>Gjennom årene har vi utviklet oss til en pålitelig kilde for vinterstøvler av høy kvalitet fra anerkjente merker over hele verden. Vi har vokst og tilpasset oss, men vårt forpliktelse til å tilby stil, komfort og funksjonalitet har alltid vært kjernen i vårt oppdrag.</p>
+        <p>I dag er Vinterhjerte en pioner innen vinterskoindustrien. Vårt team består av eksperter som nøye utvelger hvert produkt i vår samling, og vårt fokus forblir det samme: Å holde føttene varme og beskyttet under de mest utfordrende vinterforholdene.</p>
+        <p>Vi ønsker å takke våre lojale kunder for deres støtte gjennom årene. Uten dere ville ikke vår historie vært mulig. Vi ser frem til å fortsette å hjelpe deg med å møte vinteren med selvtillit, stil og komfort.</p>
+    </section>
+    </main>
+    <script>
+         //Tok scriptet fra forelesning "flex og grid" fra uka før for å ha en funksjonererende hambruger meny men den er i konflikt med den ene baren på toppen av siden på mobil
+        let x = document.querySelector(".navbar")
+        document.getElementById("ham").addEventListener("click", (e) => {           
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar"
+            }
+        })
+    </script>
 </body>
 </html>

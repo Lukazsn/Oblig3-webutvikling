@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">          <!-- tok bare standard starten for å implementere css og elementer-->
+    <meta charset="UTF-8">          <!-- tok bare standard starten for å implementere css og responsive elementer-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
     <link href="css/font/css/fontawesome.css" rel="stylesheet">
@@ -15,7 +15,9 @@
     <div id="grid">
         <header>
             <nav class="main-nav">
-                <img src="img/Skjermbilde 2023-10-20 021407.jpg" alt="Vinterhjerte Logo">
+                <a href="index.html"> <!--Gjorde logoen til en link til index.html-->
+                    <img src="img/Skjermbilde_2023-10-20_021407.jpg" alt="Vinterhjerte Logo">
+                </a>
                 <div class="nav-content">
                     <!-- Ikon for søkefunksjonen -->
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -24,11 +26,14 @@
                 </div>
                 <ul class="navbar">
                     <!-- Navigasjonsmeny med lenker -->
-                    <li><a href="#">Hjem</a></li>
+                    <li><a href="index.html">Hjem</a></li>
                     <li><a href="produkter">Produkter</a></li>
-                    <li><a href="#services">Tjenester</a></li>
+                    <li><a href="#Tjenester">Tjenester</a></li>
                 </ul>
             </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+            </div>
             <nav id="sub-navbar">
                 <ul class="sub-navbar">
                     <!-- Undermeny med lenker -->     
@@ -49,19 +54,14 @@
                 <img src="img/MH-Web-Export-4-700x466.jpg" alt="Winter boots">          <!--Tenkte det var best å ha samme bilde som i wireframe, så det ble ikke så høy kvalitet som jeg ønsket-->
                 <section>
                     <h2>Vinter klassikere som vinner hver gang</h2>
-                    <a href="Handle våre Vinter-essensieller">Handle våre Vinter-essensieller</a>    <!--Gjorde denne om til en random link så den skulle se ut som den gjorde i wireframe -->
+                    <a href="Handle_våre_Vinter-essensieller">Handle våre Vinter-essensieller</a>    <!--Gjorde denne om til en random link så den skulle se ut som den gjorde i wireframe -->
                 </section>    
             </section>
             <!-- Seksjon 2 med en overskrift og en beskrivelse (denne er høyrejustert) -->
-            <a href="produkt.html">
             <section class="flex høyre">
+                <a href="produkt.html">
                     <img src="img/shoes-795698_1280.jpg" alt="Polarvakt Frostbittstøvler">
-                    <section>
-
-                    </section>
-                    </section> 
                     </a>
-
                 <section>
                     <h2>Polarvakt Frostbittstøvler</h2>
                     <p class="Farge-endring">Før: 2500 kr</p>
@@ -69,7 +69,7 @@
                 </section>
             </section>
             <!-- Seksjon 3 for tjenester med flere artikler -->
-            <section id="services">
+            <section id="Tjenester">
                 <h2>Tjenester</h2>
                 <article>
                     <h3>Hjelp ? </h3>
@@ -94,18 +94,13 @@
 
         </footer>
     </div>
-    <!-- JavaScript-kode for å gjøre navigasjonsmenyen responsiv -->
     <script>
-        // Finn navigasjonsmenyen
+        //Tok scriptet fra forelesning "flex og grid" fra uka før for å ha en funksjonererende hambruger meny men den er i konflikt med den ene baren på toppen av siden på mobil
         let x = document.querySelector(".navbar")
-        // Legg til en hendelseslytter for klikk på menyikonet (ham)
         document.getElementById("ham").addEventListener("click", (e) => {
-            // Sjekk om navigasjonsmenyen allerede har klassen "responsive"
             if (x.className === "navbar") {
-                // Hvis ikke, legg til klassen for responsiv meny
                 x.className += " responsive";
             } else {
-                // Hvis den allerede har klassen, fjern den for å gjøre menyen skjult
                 x.className = "navbar"
             }
         })
