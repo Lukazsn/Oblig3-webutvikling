@@ -1,18 +1,18 @@
-/* General Styles */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #000000;
-    text-decoration: none;
+    
 }
 
-/* Grid Container Styles */
+
 #grid {
     display: grid;
     grid-template-areas: "header" "main" "footer";
     margin: 0;
 }
 
-/* Header Styles */
+
 header {
     font-size: 2rem;
     font-weight: 600;
@@ -24,7 +24,7 @@ header {
     text-align: center;
 }
 
-/* Navigation Styles */
+
 header nav {
     display: flex;
     justify-content: space-between;
@@ -46,7 +46,6 @@ header h6 {
     max-width: 80%;
     margin: 0 auto;
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
 }
 
@@ -58,7 +57,7 @@ header h6 {
     display: none;
 }
 
-/* Responsive Navigation Styles */
+
 .responsive {
     display: flex;
     flex-direction: column;
@@ -81,7 +80,7 @@ header h6 {
 
 
 
-/* Sub-Navigation Styles */
+
 #sub-navbar {
     background-color: #0a4f8a;
     padding: 0.5rem 0;
@@ -104,7 +103,7 @@ header h6 {
     text-decoration: none;
 }
 
-/* Main Section Styles */
+
 main {
     grid-area: main;
     text-align: center;
@@ -114,12 +113,12 @@ main section img {
     width: 100%;
 }
 
-/* Footer Styles */
+
 footer {
     grid-area: footer;
 }
 
-/* Services Section Styles */
+
 #Tjenester {
     display: flex;
     flex-direction: row;
@@ -140,10 +139,17 @@ footer {
     min-width: 200px;
 }
 
-/* Media Query Styles */
+
 @media only screen and (min-width: 600px) {
     #grid {
         grid-template-areas: "header header header" "main main main" "footer footer footer";
+    }
+
+    #Tjenester {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     .navbar {
@@ -160,20 +166,50 @@ footer {
 
 }
 
-    /* Mobile Styles */
+ 
 @media (max-width: 600px) {
+
+    #grid {
+        grid-template-areas: "header" "main" "footer";
+    }
+
+    #Tjenester {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header li {
+        margin: 0 10px;
+    }
+
+    header li a {
+        max-width: none;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar i {
+        font-size: 2rem;
+        margin: 0 10px;
+    }
+
     header {
-        font-size: 1.5rem; /* Decrease header font size */
+        font-size: 1.5rem; 
     }
 
     header nav {
-        flex-direction: row; /* Adjust navigation flex direction for mobile */
+        flex-direction: column; 
+        align-items: center;
     }
 
     header section h6{
         max-width: 100%;
         text-align: center;
     }
+
 
     main section h2{
         max-width: 100%;
@@ -183,37 +219,35 @@ footer {
     }
 
     main section img {
-        max-width: 100%; /* Ensure images don't overflow on small screens */
+        max-width: 100%; 
     }
 
     .search-bar {
-        padding: 5px; /* Adjust search bar padding for mobile */
+        padding: 5px; 
     }
 
     .search-bar input[type="text"] {
-        padding: 5px; /* Adjust input padding for mobile */
+        padding: 5px; 
     }
 
     .nav-content {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        max-width: 100% !important;
+        max-width: 100%;
  
     }
 
-    .nav-content .fa-solid {
-        font-size: 2rem;
-    }
-
     .nav-content i {
-        font-size: 1rem;
+        font-size: 2rem;
         margin-left: 10px;
     }
+
+
     
 
     .flex {
-        flex-direction: column; /* Adjust flex direction for mobile */
+        flex-direction: column; 
     }
 
     .main {
@@ -249,15 +283,17 @@ footer {
 
 
     
-    #Tjenester atricle {
+    #Tjenester article {
         max-width: 100%;
+        width: 100%;
+        min-width: 200px;
     }
-    /* Add more mobile-specific styles as needed */
+    
 }
 
 
 
-/* Styles for Sub-Navigation within the Header */
+
 #sub-navbar {
     background-color: #47A8EF;
 }
@@ -336,19 +372,19 @@ main .produkt-info p {
 
 main .produkt-info .Legg-til-i-handlekurv {
     display: inline-block;
-    padding: 40px 60px; /* Adjust the padding as needed */
-    background-color: #7DC6FB; /* Change to the desired button background color */
-    color: #fff; /* Button text color */
+    padding: 40px 60px; 
+    background-color: #7DC6FB; 
+    color: #fff;
     font-weight: bold;
-    text-decoration: none; /* Remove underlines */
+    text-decoration: none; 
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Smooth color transition on hover */
+    transition: background-color 0.3s; 
 }
 
 main .produkt-info .Legg-til-i-handlekurv:hover {
-    background-color: #7DC6FB; /* Change to the desired hover background color */
+    background-color: #7DC6FB; 
 }
 
 .produkt-container .Polarvakt-endring {
@@ -356,11 +392,25 @@ main .produkt-info .Legg-til-i-handlekurv:hover {
 }
 
 #om-oss {
-    max-width: 800px; /* Begrens maksimal bredde for bedre lesbarhet */
-    margin: 0 auto; /* Sentrer innholdet horisontalt */
+    max-width: 800px; 
+    margin: 0 auto; 
   }
 
   #om-oss p {
-    margin: 20px 0; /* Legg til litt mellomrom mellom avsnittene for bedre lesbarhet */
+    margin: 20px 0; 
     font-weight: bold;
+  }
+
+  .sko-og-knapp{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .sko-og-knapp select {
+    margin: 10px;
+  }
+
+  .sko-og-knapp button {
+    width: 100%;
   }

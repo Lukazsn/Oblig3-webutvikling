@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">          <!-- tok bare standard starten for å implementere css og responsive elementer-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
     <link href="css/font/css/fontawesome.css" rel="stylesheet">
     <link href="css/font/css/brands.css" rel="stylesheet">
@@ -11,7 +11,6 @@
     <title>Vinterhjerte</title>
 </head>
 <body>
-    <!-- Hovedbeholderen for nettstedet -->
     <div id="grid">
         <header>
             <nav class="main-nav">
@@ -19,13 +18,11 @@
                     <img src="img/Skjermbilde_2023-10-20_021407.jpg" alt="Vinterhjerte Logo">
                 </a>
                 <div class="nav-content">
-                    <!-- Ikon for søkefunksjonen -->
+                    <!-- implementerte fontawsome for mobile -->
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <!-- Ikon for navigasjonsmenyen på små skjermer -->
                     <i id="ham" class="fa-solid fa-bars"></i>
                 </div>
                 <ul class="navbar">
-                    <!-- Navigasjonsmeny med lenker -->
                     <li><a href="index.html">Hjem</a></li>
                     <li><a href="produkter">Produkter</a></li>
                     <li><a href="#Tjenester">Tjenester</a></li>
@@ -35,8 +32,7 @@
                 <input type="text" placeholder="Search">
             </div>
             <nav id="sub-navbar">
-                <ul class="sub-navbar">
-                    <!-- Undermeny med lenker -->     
+                <ul class="sub-navbar">  
                     <li><a href="#">Nytt</a></li>
                     <li><a href="#">Dame</a></li>
                     <li><a href="#">Herre</a></li>
@@ -49,7 +45,6 @@
             </section>
         </header>
         <main>
-            <!-- Seksjon 1 med en overskrift og en beskrivelse -->
             <section class="flex">
                 <img src="img/MH-Web-Export-4-700x466.jpg" alt="Winter boots">          <!--Tenkte det var best å ha samme bilde som i wireframe, så det ble ikke så høy kvalitet som jeg ønsket-->
                 <section>
@@ -57,9 +52,8 @@
                     <a href="Handle_våre_Vinter-essensieller">Handle våre Vinter-essensieller</a>    <!--Gjorde denne om til en random link så den skulle se ut som den gjorde i wireframe -->
                 </section>    
             </section>
-            <!-- Seksjon 2 med en overskrift og en beskrivelse (denne er høyrejustert) -->
             <section class="flex høyre">
-                <a href="produkt.html">
+                <a href="produkt.html">    <!--produkt siden-->
                     <img src="img/shoes-795698_1280.jpg" alt="Polarvakt Frostbittstøvler">
                     </a>
                 <section>
@@ -68,7 +62,6 @@
                     <p>Nå: 1999 kr</p>
                 </section>
             </section>
-            <!-- Seksjon 3 for tjenester med flere artikler -->
             <section id="Tjenester">
                 <h2>Tjenester</h2>
                 <article>
